@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'treebeard',
     'auditlog',
     'core',
+    'academic_structure',
+    'courses',
+    'grading',
 ]
 
 MIDDLEWARE = [

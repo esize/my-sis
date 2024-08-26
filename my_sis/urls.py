@@ -16,10 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+import core.views as core
+import academic_structure
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/people/', view=views.person_list),
-    path('api/people/<int:pk>/', view=views.person_detail),
+    path('api/people/', view=core.person_list),
+    path('api/people/<int:pk>/', view=core.person_detail),
+    # path('api/academic_units/', view=core.academic_unit_list),
+    # path('api/academic_units/<int:pk>/', view=core.academic_unit_detail),
+    # path('api/academic_levels/', view=core.views.academic_level_list),
+    # path('api/academic_levels/<int:pk>/', view=core.views.academic_level_detail),
+    # path('api/program_of_study_types/', view=core.views.program_of_study_type_list),
+    # path('api/program_of_study_types/<int:pk>/', view=core.views.program_of_study_type_detail),
+    # path('api/program_of_studies/', view=core.views.program_of_study_list),
+    # path('api/program_of_studies/<int:pk>/', view=core.views.program_of_study_detail),
+    # path('api/educational_credentials/', view=core.views.educational_credential_list),
+    # path('api/educational_credentials/<int:pk>/', view=core.views.educational_credential_detail),
+    # path('api/educational_credential_types/', view=core.views.educational_credential_type_list),
+    # path('api/educational_credential_types/<int:pk>/', view=core.views.educational_credential_type_detail),
 ]
